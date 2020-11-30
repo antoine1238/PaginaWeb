@@ -1,0 +1,120 @@
+{% extends "index.html" %}
+
+{% block title %}
+Servicios
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="topmargin-xl"></div>
+
+<div class="b_azul">
+    <div class="container" style="color:white;">
+        <div class="content-center">
+            <h2 ><b>Shipments</b></h2>
+            <p style="color:white;">Shipments nationally and internationally</p>
+        </div>
+    </div>
+</div>
+
+<hr><br>
+
+<div class="container">
+
+    <h4>&nbsp; We carry out all kinds of shipments of our products to cover any circumstance and provide comfort and security in your purchases. 
+    </h4>
+<br> 
+    <h4>We also have monthly memberships that offer benefits and discounts on our services and that you can choose according to your needs
+    </h4>
+<br>
+    <h4>
+    we offer three types of membership: default, pro and enterprise:
+    </h4>
+
+<hr><br>
+    <h4>
+        - Default :
+    </h4>
+<br>
+    <h5 class="content-center" style="text-align:left;">      
+    <li>Each shipment has an individual cost depending on its characteristics, weight, height, ect.</li>    
+    <li>offers on shipping and product costs</li>    
+    </h5>
+
+<hr><br>
+    <h4>
+        - Pro :
+    </h4>
+<br>
+    <h5 class="content-center" style="text-align:left;">      
+    <li>With the pro membership you do not pay for individual shipments of motorcycles, trucks and airplanes until you exceed the weight limit</li>  
+    <li>has a shipping limit of up to 500kg per month</li>  
+    <li>may have better recurring offers on items</li>  
+    </h5>
+
+<hr><br>
+    <h4>
+        - Enterprise :
+    </h4>
+<br>
+    <h5 class="content-center" style="text-align:left;">      
+    <li>With the enterprise membership you do not pay for individual shipments of motorcycles, trucks, planes and boats until you exceed the weight limit</li>
+    <li>has a shipping limit of up to 2 tons per month</li>  
+    <li>may have better recurring deals on shipments and items</li>  
+
+    </h5>
+
+</div>
+<hr><br>
+
+
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Default</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+        <ul class="list-unstyled mt-3 mb-4" >
+          <li style="margin-top:50px;">recurring offers on shipments</li>
+        </ul>
+        <button style="margin-top:39px;" type="button" class="btn btn-lg btn-block btn-outline-primary" ><a href="{% url 'signup' %}" >Sign up for free</a></button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Pro</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+        <div style="margin-top:40px;">
+        <ul  class="list-unstyled mt-3 mb-4" >
+          <li>limit of up to 500kg per month</li>
+          <li>you can have better recurring offers on shipments</li>
+        </ul>
+        </div>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Enterprise</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+        <div style="margin-top:40px;">
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>limit of up to 2 tons per month</li>
+          <li>may have better recurring deals on shipments and items</li>
+        </ul>
+        </div>
+        <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

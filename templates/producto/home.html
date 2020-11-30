@@ -1,0 +1,63 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %}
+    Tienda
+{% endblock %}
+
+{% block content %}
+
+<div class="topmargin-xl"></div>
+
+<div class="b-blue">
+<div class="content-center" style="color:black;">
+    <h2 >Tienda</h2>
+</div>
+<div class="container">
+    <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <h3 style="margin-top:-7px;"><a class="p-2" style="color:black;" href="{% url 'add' %}">Publicar</a></h3>
+      <h5><a class="p-2" style="color:black;" href="#">Electrodomensticos</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Hogar</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Construccion</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Juguetes</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Articulos deportivos</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Automotriz</a></h5>
+    </nav>
+  </div>
+</div>
+</div>
+
+<br>
+
+
+<div class="container">
+        <div class="row">
+
+            {% for producto in tienda %}
+            <div class="col-sm-12 col-md-8 offset-md-2 mt-5 p-0 post-container">
+                
+                <a href="{% url 'detail' producto.usuario %}">
+                    <img class="mr-3 rounded-circle" height="45" src="{{ producto.usuario.profile.picture.url }}">
+                    <a href="{% url 'detail' producto.usuario %}" style="color:black;" ><b>{{ producto.usuario }}</b></a> 
+                </a>
+                <hr>
+                <img style="width: 100%;" src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+                
+                <h5 class="ml-2 mt-0 mb-2"><b>{{ producto.nombre }}</b></h5>
+                <h4 class="ml-2 mt-0 mb-2">{{ producto.precio }} $</h4>
+
+                {% for categoria in producto.categoria.all %}
+                    <p class="ml-2 mt-0 mb-2"> {{ categoria }} </p>
+                {% endfor %}
+
+                <p class="ml-2 mt-0 mb-2"> {{ producto.created }} </p>
+            
+                <hr>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

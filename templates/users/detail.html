@@ -1,0 +1,65 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %}
+    @{{ user.username }} | Detail
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="topmargin-xl">
+    </div>
+
+    <div class="content-center">
+        <div class="container" style="padding-right:20px;">
+                {% if user.profile.picture %}
+                    <img src="{{ user.profile.picture.url }}" class="rounded-circle" height="120" />
+                {% else%}
+                    <img src="{% static 'img/lol2.png' %}" class="rounded-circle" height="120" />
+                {% endif %}
+        </div>
+
+        <div class="container">
+
+                <h4>@{{ user.first_name }} | {{ user.get_full_name }}</h4>
+                {% if user == request.user %}
+                    <a href="{% url 'update' %}" style="color:grey;">Edit profile</a>
+                {% else %}
+                    <a href="" style="color:grey;"> Follow</a>
+                {% endif %}
+            <hr><br>
+                <h4 class="text-muted">{{ user.profile.biography }}</h4>
+                
+            <br>
+
+            {% if user.profile.birthdate %}
+                <h4 style="text-align:left;">Birthdate</h4>
+                <hr><br>
+                <h4 class="text-muted">{{ user.profile.birthdate }}</h4>
+            {% endif %}
+
+            {% if user.profile.nationality %}
+                <h4 style="text-align:left;">Nationality</h4>
+                <hr><br>
+                <h4 class="text-muted">{{ user.profile.nationality }}</h4>
+            {% endif %}
+
+            {% if user.profile.phone %}
+                <h4 style="text-align:left;">Phone</h4>
+                <hr><br>
+                <h4 class="text-muted">{{ user.profile.phone }}</h4>
+            {% endif %}
+
+            <hr><br>
+
+        </div>
+        
+        
+
+    </div>
+
+
+{% endblock %}
+

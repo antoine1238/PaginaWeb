@@ -1,0 +1,115 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block title %}
+    Si me suicido me muero.?
+{% endblock %}
+
+{% block content %}
+
+<div class="topmargin-xl">
+</div>
+
+<div class="blog_4">
+    <div class="container">
+        <div class="topmargin-lg" style="text-align:center;color:white;">
+            <h2 style="font-size:70px;">si me suicido me muero?</h2>
+            <div class="topmargin-sm">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid">
+            <div class="content-center">
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                since the 1500s,</p>
+            </div>
+    </div>
+
+    <div class="content-center" style="text-align:left;">
+
+            <h3><b>Lorem ipsum.?</b></h3>
+        <hr><br>   
+            <h4>
+                &nbsp;There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, 
+                or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
+                anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+                 making this the first true generator on the Internet.
+            </h4>        
+        <br>
+            <h3><b>¿example of blog title?</b></h3>
+        <hr><br>
+            <h4>
+                 It uses a dictionary of over 200 Latin words, combined with a handful of model sentence 
+                 structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, 
+                 or non-characteristic words etc.
+            </h4>
+        <br>
+            <h5 class="text-muted">
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected 
+                humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+                be sure there isn't anything embarrassing hidden in the middle of text.
+            </h5>
+        <br>
+            <img src="{% static 'img/portada.jpg' %}" width="800" height="350" />
+        <br>
+            <h3><b>Why do we use it.?</b></h3>  
+        <hr><br>
+            <h4>
+            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look 
+            like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' 
+            will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+            (injected humour and the like).
+            </h4>
+        </div>
+
+    <hr><br>
+
+    <div class="container-fluid">
+            <div class="content-center">
+                <h2>Véase tambien.. </h2>
+            </div>
+    </div>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+            
+                <div class="row">
+                    <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img  src="{% static 'img/python.jpg' %}" width="350" height="226" />
+                        <div class="card-body">
+                        <h5>Porque python es el mejor lenguaje para novatos</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="{% url 'blog-detail_2' %}" style="color:black;padding-left:220px;">Read more..</a>
+                        </div> 
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img  src="{% static 'img/estadisticas.jpg' %}" width="350" height="226" />
+                        <div class="card-body">
+                        <h5>Mejores paises para trabajar de programador</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="{% url 'blog-detail_3' %}" style="color:black;padding-left:220px;">Read more..</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img  src="{% static 'img/programacion.jpg' %}" width="350" height="226" />
+                        <div class="card-body">
+                        <h5>Mejores lenguajes de programacion en 2020</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="{% url 'blog-detail_1' %}" style="color:black;padding-left:220px;">Read more..</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+{% endblock %}

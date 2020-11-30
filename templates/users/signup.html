@@ -1,0 +1,70 @@
+{% extends "users/base.html" %}
+
+{% block title %} Signup {% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="{% static 'img/lol2.png' %}" class="logo-brand" alt="logo"/>ProyectoWeb</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'home' %}" id="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'servicio' %}" id="portfolio">Servicios</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="aboutus">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="testimonial">Contact</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class=" topmargin-xl">
+    </div>
+
+<div class="container  ">
+        <div class="row  justify-content-center align-items-center">
+            <div class="" id="auth-container">
+                <img class="img-fluid rounded mx-auto d-block pb-4"src="{% static 'img/lol2.png' %}">
+                    <form action="{% url 'signup' %}" method="POST">
+                        {% csrf_token %}
+
+                        {% if error %}
+                            <p class="alert alert-danger" style="text-align:center;">{{error}}</p>
+                        {% endif %}
+                        
+                        <p style="padding:2px;"><input class="form-control" type="text" placeholder="Username" name="username" required/></p>
+                        <p style="padding:2px;"><input class="form-control" type="password" placeholder="Password" name="password" required/></p>
+                        <p style="padding:2px;"><input class="form-control" type="password" placeholder="Password confirmation" name="password_confirmation" required/></p>
+                        <p style="padding:2px;"><input class="form-control" type="text" placeholder="First name" name="first_name" required/></p>
+                        <p style="padding:2px;"><input class="form-control" type="text" placeholder="Last name" name="last_name" required/></p>
+                        <p style="padding:2px;"><input class="form-control" type="email" placeholder="Email" name="email" required/></p>
+
+                        <button class="btn btn-primary btn-block mt-3" type="submit">Register</button>
+                        <p style="text-align:center;color:black;">Do you already have an account.? <a style="color:blue;" href="{% url 'login' %}"> Login </a>
+                    </form>
+                    
+            </div>
+        </div>
+</div>
+<br>
+
+
+
+{% endblock %}
+
+              
+
+            

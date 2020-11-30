@@ -1,0 +1,123 @@
+{% extends "index.html" %}
+
+{% block title %} Home {% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+{% comment %} seccion #1 {% endcomment %}
+    <section id="hero">
+        <div class="container">
+            <div class="content-center topmargin-lg">
+                <h1>Store Online International</h1>
+                <div class="topmargin-sm">
+                <p><h4>we offer the most reliable and popular interactive online store of the decade. also offering offers in products and shipments both nationally and internationally</h4></p>
+                <a href="{% url 'servicio' %}" class="btn btn-light topmargin-lg">Read More..<ion-icon name="caret-forward-circle-outline"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    {% comment %} seccion #2 {% endcomment %}
+    <section id="portfolio">
+        <div class="container-fluid">
+            <div class="content-center">
+                <h2>All Kinds of <b>Products</b></h2>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                since the 1500s,</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="portfolio-container">
+                        <div class="portfolio-details">
+                            <a href="#">
+                                <h2>Toys</h2>
+                            </a>
+                            <a href="#">
+                                <p>For Fun</p>
+                            </a>
+                            
+                        </div>
+                        <img src="{% static 'img/juguetes.jpg' %}" class="img-fluid" alt="portfolio 1"/>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="portfolio-container">
+                        <div class="portfolio-details">
+                            <a href="#">
+                                <h2>Sports Articles</h2>
+                            </a>
+                            <a href="#">
+                                <p>Healthy Life</p>
+                            </a>
+                            
+                        </div>
+                        <img src="{% static 'img/deporte.jpg' %}" class="img-fluid" alt="portfolio 2" />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="portfolio-container">
+                        <div class="portfolio-details">
+                            <a href="#">
+                                <h2>Home</h2>
+                            </a>
+                            <a href="#">
+                                <p>Harmony</p>
+                            </a>
+                            
+                        </div>
+                        <img src="{% static 'img/hogar.jpg' %}" class="img-fluid" alt="portfolio 3"/>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="portfolio-container">
+                        <div class="portfolio-details">
+                            <a href="#">
+                                <h2>Tools</h2>
+                            </a>
+                            <a href="#">
+                                <p>Building</p>
+                            </a>
+                            
+                        </div>
+                        <img src="{% static 'img/herramientas.jpg' %}" class="img-fluid size" alt="portfolio 4"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    {% comment %} seccion #3 {% endcomment %}
+    <section id="about us" class="bg-light-grey">
+        <div class="container">
+             <div class="content-center">
+                <h2>All Kinds of <b>Shipments</b></h2>
+                <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever 
+                since the 1500s,</p>
+            </div>
+
+            <div class="row">
+                <div class="member-container ">
+                    <img src="{% static 'img/envio1.jpg' %}" class="img-fluid" alt="member 1">
+                </div>
+                <div class="col-md-4 topmargin-xs">
+                    <img src="{% static 'img/envio2.png' %}" class="img-fluid" alt="member 2">
+                </div>
+                <div class="col-md-4 topmargin-xs">
+                    <img src="{% static 'img/envio3.jpg' %}" class="img-fluid" alt="member 3">
+                </div>
+                <div class="col-md-4 topmargin-xs">
+                    <img src="{% static 'img/envio4.jpg' %}" class="img-fluid size-section3" alt="member 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+{% endblock %}

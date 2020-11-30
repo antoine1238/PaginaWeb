@@ -1,0 +1,76 @@
+{% extends "index.html" %}
+
+{% block title %}
+@{{user}} | Update
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+    <p style="padding:60px 0;"></p>
+
+<div class="container ">
+    <div class="content-center ">
+        <form action="{% url 'update' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+            {# picture #}
+            <div class="media" style="padding:20px 0;">
+                {% if user.profile.picture %}
+                    <img src="{{ user.profile.picture.url }}" class="rounded-circle" height="100" />
+                {% else%}
+                    <img src="{% static 'img/lol2.png' %}" class="rounded-circle" height="100" />
+                {% endif %}
+
+                <div class="media-body" style="color:black;">
+                    <h2>@{{ user.username }} | {{ user.get_full_name }}</h2>
+                    <p><input  type="file" name="picture" style="color:black;"/></p>
+                </div>
+            </div>
+
+            <div style="color:black;">
+
+            {# Phone #}
+            <label>Phone</label>
+            <p><input class="form-control" type="number" name="phone" value="{{ form.phone.value }}"/></p>
+            {% if form.phone.errors %}
+            <div class="alert alert-danger">
+                {% for i in form.phone.errors %} 
+                    {{ i }} 
+                {% endfor %}    
+            </div>
+            {% endif %}
+
+
+            {# Biography #}
+            <label>Biography</label>
+            <p><textarea class="form-control" name="biography" >{{ form.biography.value }}</textarea></p>
+
+            {# Nationality #}
+            <label>Nationality</label>
+            <p><input class="form-control" type="text" name="nationality" value="{{ form.nationality.value }}"/></p>
+            {% if form.nationality.errors %}
+            <div class="alert alert-danger">
+                {% for i in form.nationality.errors %} 
+                    {{ i }} 
+                {% endfor %}    
+            </div>
+            {% endif %}
+
+
+            {# Birthdate #}
+            <label>Birthdate</label>
+            <p><input class="form-control" type="date" name="birthdate" value="{{ form.birthdate.value.year }}-{{ form.birthdate.value.month }}-{{ form.birthdate.value.day }}"/></p>
+
+            <button class="btn btn-primary btn-block mt-5" type="submit">Update</button>
+            </div>  
+
+            <p style="padding:20px;"></p>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}  
+

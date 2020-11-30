@@ -1,0 +1,69 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="topmargin-xl"></div>
+
+<div class="b_gris">
+<div class="container">
+    <div class="container-fluid">
+        <div class="content-center">
+            <h2 style="color:black;">Blog</h2>
+        </div>
+    </div>
+    
+    <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between" >
+      <h5><a class="p-2" style="color:black;" href="#">World</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">U.S.</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Technology</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Design</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Culture</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Business</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Politics</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Opinion</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Science</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Health</a></h5>
+      <h5><a class="p-2" style="color:black;" href="#">Style</a></h5>
+    </nav>
+  </div>
+</div>
+</div>
+
+<br>
+
+
+{% for post in posts %}
+<div class="container">
+  <div class="row mb-2 ">
+    <div class="col-md-12">
+      <div class="row no-gutters border mb-4  ">
+        <div class="col p-4 d-flex flex-column position-static">  
+          {% for categoria in post.Categorias.all %}
+              <p><strong class="d-inline-block mb-2 text-primary">{{ categoria }}</strong><p>
+          {% endfor %}         
+
+          <h3 class="mb-0">{{ post.titulo }}</h3>
+          <p class="card-text mb-auto">{{ post.contenido }}</p>
+          <p class="card-text mb-auto">{{ post.autor }}</p>
+          <div class="mb-1 text-muted">{{ post.created }}</div>
+          <a href="/blog/blog_{{post.id}}" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img  src="{{ post.imagen.url }}" width="420" height="260" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{post.id}}
+{% endfor %}
+
+
+{% endblock %}

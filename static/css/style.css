@@ -1,0 +1,228 @@
+/* fuente de letra, estilo */
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* ajustes del color de fondo del nav  */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+    min-height: 100px;
+}
+relative
+h1 { font-size: 66px; font-weight: 600; line-height: 80px;}
+h2 { font-size: 48px; margin-bottom: 30px; }
+
+.size {
+    width: 1000px; height: 517px;
+}
+
+.size-section3 {
+    height: 195px;
+}
+
+/* lista de clases para dar margenes de espaciado, boton de la img principal */
+.topmargin-xs { margin-top: 15px !important; }
+.topmargin-sm { margin-top: 30px !important; }
+.topmargin-lg { margin-top: 60px !important; }
+.topmargin-xl { margin-top: 120px !important; }
+
+/* tamaño de letra y marco de el boton de la img principal */
+.btn {
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+/* algo sobre el boton "register" de la img principal */
+.btn-light {
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #ffffff;
+}
+
+.btn i { font-size: 14px; margin-left: 5px; }
+
+p {
+    font-size: 18px;
+    color: #999999;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* un espaciado para cada seccion de contenido */
+section{
+    padding: 120px 0 ;
+}
+
+/* colores de los links en el nav incluyendo cuando ponemos encima el mause */
+.nav-link {color: black;}
+.nav-link:hover {color: black;}
+
+/* tamaño del logo en el nav */
+.logo-brand {
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.navbar-toggler {font-size: 40px;}
+.navbar-toggler:focus { outline: none;}
+
+/* imagen grande de inicio, lol.jpg */
+#hero {
+    background-image: url(../img/portada.jpg);
+    background-size: cover;
+    padding-top: 450px;
+    min-height: 900px;
+    color: rgb(255, 242, 242);
+}
+
+/* color al titulo */
+#hero h4 {
+    color: #ffffff;
+}
+
+/* centrando todos los textos con esta clase */
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+/* agregando un borde un poco redondeado a la imagen */
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+/* metiendo texto dentro de la imagen darius */
+.portfolio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+
+/* agregando color al titulo */
+.portfolio-details a h2, .portfolio-details a p {
+    color: #ffffff;
+}
+
+/* para quitar la linea azul al reposar el mause sobre el link de las imagenes, ej: darius */
+a:hover {
+    text-decoration: none;
+}
+
+/* elimina el espaciado entre el titulo y el contenido de las letras en las img, ej: darius */
+.portfolio-details h2 {
+    margin-bottom: 0px;
+}
+
+/* con estas dos configuraciones daremos el efecto de acercamiento en las imagenes  */
+.portfolio-container img {
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+.portfolio-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* simple cambio de color de letra para el ultimo link */
+.text-dark {color: black;}
+
+/* simple cambio de color de fondo */
+.bg-light-grey {background-color: #f5f5f5;}
+
+.bg-dark {background-color: rgb(25, 22, 22) !important;}
+.bg-grey {background-color: rgb(138, 137, 137) !important;}
+
+.member-container img {
+    background-size: cover;
+    width: 1200px; 
+    height: 500px
+}
+
+#footer {
+    padding: 50px 0;
+    text-align: center;
+    color: #ffffff;
+}
+#footer a {
+    color: #ffffff;
+}
+#footer a:hover {
+    color: #ffffff;
+}
+
+#footer .list-inline .list-inline-item {
+    padding: 10px 15px;
+}
+
+.b-blue {
+    background: #F0F2F0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000C40, #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    padding-top: 220px;
+    min-height: 300px;
+    padding-top: 100px ;
+}
+
+.b_azul {
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    padding-top: 220px;
+    min-height: 300px;
+    padding-top: 100px ;
+}
+
+.b_gris {
+    background: #E6DADA;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #274046, #E6DADA);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #274046, #E6DADA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-size: cover;
+    padding-top: 220px;
+    min-height: 300px;
+    padding-top: 100px ;
+}
+
+
+
+.blog_1 {
+    background-image: url(../img/programacion.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    min-height: 400px;
+}
+.blog_2 {
+    background-image: url(../img/python.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    min-height: 400px;
+}
+.blog_3 {
+    background-image: url(../img/estadisticas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    min-height: 400px;
+}
+.blog_4 {
+    background-image: url(../img/mecate.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    min-height: 400px;
+}

@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block title %}
+    Publicar Producto
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="topmargin-xl">
+</div>
+
+<div class="content-center" style="color:black;">
+    <h2 >Publicar Producto</h2>
+</div>
+
+<div class="container">
+    <div class="content-center" >
+        <form action="{% url 'add' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <input type="hidden" name="usuario" value="{{ user.pk }}"/>
+
+            <p style="color:black;">Foto</p><p>{{ form.imagen }}</p>
+            <p style="color:black;">Nombre del Producto</p>{{ form.nombre }}
+            <p style="color:black;">Precio del Producto</p><p><input class="form-control" type="number" name="precio"/></p>
+            <p style="color:black;">Descripción</p><textarea class="form-control" name="descripcion" ></textarea>
+            <p style="color:black;">Categoria del Producto</p>{{ form.categoria }}
+
+
+            <button class="btn btn-primary btn-block mt-5" type="submit">crear</button>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
